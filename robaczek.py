@@ -12,7 +12,7 @@
 #Przyjmuje 2 argumenty: typu Robaczek oraz Owoc i ma sprawdzać czy znajdują się na tym samym polu
 
 #TODO Stworzyć funkcję wczytajDane
-#Dane na start wczytujemy z pliku(współrzędne obiektów)
+#Dane na start wczytujemy z pliku Data.txt(współrzędne obiektów)
 
 #TODO Stworzyć funkcję pobierzWejscie
 #Użytkownik wpisuje na klawiaturze gdzie ma poruszać się robaczek

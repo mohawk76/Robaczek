@@ -128,14 +128,14 @@ def rysujPlansze(robaczek): #Funkcja rysuje plansze i obiekty znajdujące się n
 
     #Rysujemy sufit planszy
     plansza += "+"
-    for i in range(szerokosc-1):
+    for i in range(szerokosc):
         plansza += "--"
     plansza += "-+\n"
 
     #Rysujemy środek naszej planszy i ścianki boczne
-    for y in range(1,wysokosc):
+    for y in range(0,wysokosc):
         plansza += "| "
-        for x in range(1,szerokosc):
+        for x in range(0,szerokosc):
             if robaczek.pobierzPozycje() == [x,y]: #Sprawdzamy czy robaczek znajduje się na tych współrzędnych
                 plansza += "O "
             elif Owoc.listaOwockow[0].pobierzPozycje() == [x,y]: #Sprawdzamy czy pierwszy owoc na liście znajduje się na tych wspórzędnych
@@ -146,7 +146,7 @@ def rysujPlansze(robaczek): #Funkcja rysuje plansze i obiekty znajdujące się n
 
     #Rysujemy podłogę planszy
     plansza += "+"
-    for i in range(szerokosc-1):
+    for i in range(szerokosc):
         plansza += "--"
     plansza += "-+\n"
     

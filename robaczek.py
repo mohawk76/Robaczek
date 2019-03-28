@@ -42,13 +42,13 @@ class Robaczek(Obiekt):  # klasa Robaczek dziedziczy po klasie Obiekt
         #Wskazówka: w naszym układzie współrzędnych, współrzędne [0,0] oznaczają lewy górny róg konsoli
 
         if kierunek == 'w': #ruch w góre
-            self._y -= 1
+            self._y -= self._predkosc
         elif kierunek == 's': #ruch w dół
-            self._y += 1
+            self._y += self._predkosc
         elif kierunek == 'a': #ruch w lewo
-            self._x -= 1
+            self._x -= self._predkosc
         elif kierunek == 'd': #ruch w prawo
-            self._x += 1
+            self._x += self._predkosc
         
         #Normalizacja x by robaczek nie znalazł się po za planszą
         if(self._x < 0):

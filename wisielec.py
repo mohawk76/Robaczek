@@ -35,13 +35,17 @@ while True: #Nieskończona pętla
             print("Brawo zgadłeś całe słowo! :P")
             print()
             break #Kończymy nieskończoną pętlę :o
-
-    if znak in slowo: #Jeśli znak znajduje się w słowie
+        else:
+            iloscProb +=1 #Zwiększa licznik prób
+            
+    elif znak in slowo: #Jeśli znak znajduje się w słowie
         indeksy = znajdzIndeksy(slowo, znak) #To pobierz wszystkie indeksy na których się znajduje
         for indeks in indeksy: #Dla każdego indeksu z listy
             temp = list(zgaduj) #przetwórz ciąg znaków na listę
             temp[indeks*2] = znak #Na przerobionym indeksie pod ciąg znaków z zgadniętymi literam zapisz zgadniętą litere 
             zgaduj = "".join(temp) #Przetwórz temp z powrotem na string i zapisz w zgaduj
+    else:
+            iloscProb +=1 #Zwiększa licznik prób
     
     if "".join(zgaduj.split()) == slowo: #jeśli zgaduj bez spacji jest równy slowo, wygrałes
         print(zgaduj)
@@ -49,6 +53,5 @@ while True: #Nieskończona pętla
         print()
         break #Kończymy nieskończoną pętlę :o
         
-    iloscProb +=1 #Zwiększa licznik prób
 
 input() #zatrzymuje wykonanie programu czekając na enter

@@ -11,6 +11,8 @@ def znajdzIndeksy(slowo, szukanyZnak): #szuka wszystkich indeksów dla wystąpie
 
 slowo = input("Wpisz słowo do zgadnięcia: ")
 
+slowo = slowo.lower()
+
 zgaduj = ""
 
 for znak in slowo: #Tworzymy ciąg znaków które będzie przetrzymywać zgadnięte litery
@@ -27,6 +29,7 @@ while True: #Nieskończona pętla
 
     print(zgaduj) #wyświetlamy zgadnięte litery lub ich brak
     znak = input("Podaj litere lub całe słowo po znaku '@': ")
+    znak = znak.lower()
 
     if znak[0] == "@": #Jeśli pierwszy znak ciągu znaków to "@"
         if znak[1:] == slowo: #To sprawdzamy czy podane znaki po "@" to słowo do odgadnięcia
